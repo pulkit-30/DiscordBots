@@ -8,5 +8,9 @@ client.on("messageCreate", (message) => {
     client.commands.get("help").execute(message, args);
   else if (command === "play")
     client.commands.get("play").execute(message, args);
+  else if (command === "leave")
+    client.commands.get("stop").execute(message, args);
+  else if (command === "skip")
+    client.commands.get("skip").execute(message, args);
   else client.commands.get("default").execute(message, args);
 });
